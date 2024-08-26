@@ -15,8 +15,12 @@ Showcase of Hikes: Explore various hiking adventures and events that you can boo
 User-Friendly Booking Process: Secure your spot on a hike by filling out a booking form.
 SMS Confirmation: Receive booking confirmations via SMS.
 Responsive Design: Optimized for both desktop and mobile devices.
+
+
 Project Structure
 The application follows a standard Flask project structure:
+
+```python
 flaskbtl2/
 │
 ├── app.py               # Main application file where routes are defined
