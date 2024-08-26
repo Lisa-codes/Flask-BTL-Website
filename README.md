@@ -38,6 +38,8 @@ flaskbtl2/
 ├── venv/                # Virtual environment (excluded from version control)
 ├── requirements.txt     # List of dependencies
 └── .gitignore           # Git ignore file
+
+```python
 Usage
 Home: View an overview of Born to Lead Mountain Adventure.
 About: Learn more about our company and mission.
