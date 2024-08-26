@@ -52,6 +52,8 @@ Flask: Python web framework for building the application.
 Bootstrap: Frontend framework for responsive design.
 HTML/CSS/JavaScript: Core web technologies for building the user interface.
 SMS API: For sending booking confirmations via SMS
+
+Visit the main website here: https://borntoleadmountainadventure.co.ke/
 Contact
 For any inquiries, please reach out to us at:
 
