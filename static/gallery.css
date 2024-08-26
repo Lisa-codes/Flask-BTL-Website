@@ -1,0 +1,65 @@
+body {
+    font-family: 'Lora', serif;
+    /* or 'Merriweather', serif; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Merriweather', serif;
+    /* for headings */
+}
+
+p,
+a,
+li {
+    font-family: 'Lora', serif;
+    /* for body text */
+}
+.intro-section {
+    background-color: #004d40;
+    padding: 60px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.gallery-section {
+    padding: 40px 0;
+}
+
+.gallery-item {
+    margin-bottom: 30px;
+}
+
+.gallery-item img,
+.gallery-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-caption {
+    margin-top: 10px;
+    font-size: 1rem;
+    text-align: center;
+    color: black;
+}
+
+.videos-section {
+    background-color: #a8c0a4;
+    padding: 40px 0;
+}
+
+.btn-custom {
+    background-color: #004d40;
+    color: #ffffff;
+}
+
+.btn-custom:hover {
+    background-color: #003833;
+    color: #ffffff;
+}

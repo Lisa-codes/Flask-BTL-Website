@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="static\contact.css">
+<!-- font awesome plugin -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Font Awesome Plugin -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Bootstrap 5.3.3 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Merriweather:wght@400;700&display=swap"
+	rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+	rel="stylesheet">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<style>
+		.navbar .nav-link {
+			color: white !important;
+		}
+	
+		.navbar .nav-link:hover {
+			color: #ccc !important;
+			/* Optional: Change color on hover */
+		}
+	</style>
+	<title>Contact Page</title>
+	<link rel="icon" type="image/png" sizes="16x16" href="static\images\favicon.ico">
+</head>
+<body>
+	<header>
+	<!-- nav bootstrap plugin-->
+	<nav class="navbar  fixed-top " style="background-color: white;">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#"> BTL Mountain Adventure </a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+				aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+				<div class="offcanvas-header">
+					<h5 class="offcanvas-title" id="offcanvasNavbarLabel"> BTL Mountain Adventure </h5>
+					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+				<div class="offcanvas-body" style="background-color: #37474f ">
+					<ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="{{ url_for('home') }}">Home</a>
+						</li>
+						<li class="nav-item ">
+							<a class="nav-link" href="{{ url_for('about') }}"> About Us </a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ url_for('contact') }}"> Contact Us </a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ url_for('gallery') }}"> Our Gallery </a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ url_for('book') }}"> Hikes & Events </a>
+						</li>
+					</ul>
+	
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!-- end of nav-->
+    </header>
+
+	<!-- Contact Header -->
+	<section class="contact-header">
+		<div class="container">
+			<h3>Get in Touch with Us</h3>
+			<p>We'd love to hear from you! Whether you have a question about our hikes, pricing, or anything else, our team
+				is ready to answer all your questions.</p>
+	</div>
+	</section>
+	
+	<!-- Contact Information -->
+	<section class="contact-info">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-4 info-item">
+					<h4>Our Location</h4>
+					<p> Nairobi, Kenya</p>
+				</div>
+				<div class="col-md-4 info-item">
+					<h4>Call Us</h4>
+					<p>+254 721 779843</p>
+				</div>
+				<div class="col-md-4 info-item">
+					<h4>Email Us</h4>
+					<p>born2tolead@gmail.com</p>
+				</div>
+			</div>
+		</div>
+	</section>
+		
+	
+	<!-- Map Section -->
+	<section class="map-container">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-10">
+					<div class="ratio ratio-16x9">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.065815030005!2d36.81235665426798!3d-1.2920666592568368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d73c6f15ab%3A0x2bf05f89fa94e42a!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2sus!4v1690735000000!5m2!1sen!2sus"
+							width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+	<!-- footer section here -->
+	<footer class="footer  text-white text-center " style="background-color: #004d40;">
+		<div class="container p-4 mt-6">
+			<!-- Social Media Links -->
+			<section class="mb-4">
+				<a class="btn btn-outline-light btn-floating m-1"
+					href="https://www.facebook.com/stephen.muiru?mibextid=ZbWKwL" role="button">
+					<i class="fab fa-facebook-f"></i>
+				</a>
+				<a class="btn btn-outline-light btn-floating m-1"
+					href="https://twitter.com/stephenmuirubtl/status/688778267701194752?lang=en" role="button">
+					<i class="fab fa-twitter"></i>
+				</a>
+				<a class="btn btn-outline-light btn-floating m-1"
+					href="https://www.instagram.com/coachstephenmuiru?igsh=MXV1b2Z5YjNnam1sMw==" role="button">
+					<i class="fab fa-instagram"></i>
+				</a>
+				<a class="btn btn-outline-light btn-floating m-1" href="mailto:born2tolead@gmail.com" role="button">
+					<i class="fas fa-envelope"></i>
+				</a>
+			</section>
+	
+			<!-- Copyright -->
+			<section class="mb-0">
+				<p>&copy; 2024 Born To Lead Mountain Adventure. All rights reserved.</p>
+			</section>
+		</div>
+	</footer>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+			integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+			crossorigin="anonymous"></script>
+		<!--all compiled plugins (below), or include individual files as needed -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+			integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+			crossorigin="anonymous"></script>
+</body> 
+</html>

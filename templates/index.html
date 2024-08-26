@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .navbar .nav-link {
+            color: white !important;
+        }
+    
+        .navbar .nav-link:hover {
+            color: #ccc !important;
+            /* Optional: Change color on hover */
+        }
+    </style>
+
+    <title>Born To Lead Mountain Adventures</title>
+    
+     
+    <!-- website css-->
+    <link rel="stylesheet" href="static\index.css" type="text/css">
+    <link rel="stylesheet" href="static\index-responsive.css" type="text/css">
+   <!-- font awesome plugin -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Font Awesome Plugin -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Bootstrap 5.3.3 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Merriweather:wght@400;700&display=swap"
+    rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="static\images\favicon.ico">
+</head>
+
+<body>
+<!-- nav bootstrap plugin-->
+<nav class="navbar  fixed-top " style="background-color: white;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#" > BTL Mountain Adventure </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> BTL Mountain Adventure </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body" style="background-color: #37474f; ">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{{ url_for('about') }}"> About Us </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact') }}"> Contact Us </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('gallery') }}"> Our Gallery </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('book') }}"> Hikes & Events </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- end of nav-->
+<!-- Carousel ================================================== -->
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100 carousel-img" src="static\images\IMG-20240505-WA0061.jpg" alt="First slide">
+            <div class="container">
+                <div class="carousel-caption carousel-caption-custom">
+                    <h1>Explore the Great Outdoors.</h1>
+                    <p>Join The Born To Lead Mountain Adventure in invigorating hiking adventures.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img class="d-block w-100 carousel-img" src="static\images\IMG-20240505-WA0069.jpg" alt="Second slide">
+            <div class="container">
+                <div class="carousel-caption carousel-caption-custom">
+                    <h1>Challenge Your Body and Mind.</h1>
+                    <p>The Hike Sessions are not just a physical activity but a way to push past your limits and
+                        challenge your resilience, drive, and mental strength.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img class="d-block w-100 carousel-img" src="static\images\IMG-20240505-WA0073.jpg" alt="Third slide">
+            <div class="container">
+                <div class="carousel-caption carousel-caption-custom">
+                    <h1>Have Fun and Connect with Others.</h1>
+                    <p>Hiking will not just be an individual endeavor but a group activity where you can share the
+                        moments with others.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div><!-- /.carousel -->
+
+
+   
+    </header>
+
+
+    <main>
+        <div class="main" >
+            <div class="features-header">
+                <h3> Mountain Hike Experience </h3>
+            </div>
+            <div class="features-container">
+                <div class="features" style="background-color: #a8c0a4; color: black;">
+                   <p> Coach archtiect Stephen K Muiru founded his pioneering initiative, Born To Lead Academy, in July 2016. </br>
+                    Soon after,he discovered a way to engage students outside the classroom through the BTL Mountain Adventure. </br>
+                  The hiking sessions are a way to test your strengthm endurance, resilience and drive. </br>
+                   It is not just a form of physical excercise, it is where we hike, learn, network </br>
+                    and build each other towards and improved mental and physical wellness
+                   </p>
+                </div>
+            </div>
+            <div class="features-header">
+                <h3> Hike Bookings Here </h3>
+            </div>
+            <div class="print" >
+                <span class="box">
+                    <h2> Coach Stephen Muiru empowers
+                        individuals</h2>
+                    <p> We offer exhilarating mountain hiking experiences designed to challenge and inspire.  <br>
+                        Our expert guides ensure safe and memorable adventures for hikers of all levels<br>
+                        Join us to explore breathtaking landscapes and discover your true potential.
+                    </p>
+                    <div class="print-btn">
+                      <a href="{{ url_for('book') }}" target="_blank"> <input type="submit" value="View Hikes" class="print-button"> </a>
+                    </div>
+                </span>
+                <div class="prt-img">
+                    <img src="static\images\IMG-20240505-WA0126.jpg" class="print-image" alt="Coach">
+                </div>
+            </div>
+
+        <!-- Testimonials Section -->
+        <div class="container my-5">
+            <h2 class="text-center text-white">Testimonials</h2>
+            <div class="text-center my-4">
+                <a href="{{ url_for('review') }}" class="btn rounded-0" style="background-color: #f0c987; color: black; border: 0;">Leave us a
+                    Review</a>
+            </div>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    {% for testimonial in testimonials %}
+                    <div class="carousel-item {% if loop.first %}active{% endif %}">
+                        <div class="card" style="background-color: #004d40; color: white;">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">{{ testimonial.name }}</h5>
+                                <p class="card-text text-center">{{ testimonial.review }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+
+           
+    </main>
+
+    <!-- footer section here -->
+<footer class="footer  text-white text-center " style="background-color: #004d40;">
+    <div class="container p-4 mt-6">
+        <!-- Social Media Links -->
+        <section class="mb-4">
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/stephen.muiru?mibextid=ZbWKwL" role="button">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/stephenmuirubtl/status/688778267701194752?lang=en" role="button">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/coachstephenmuiru?igsh=MXV1b2Z5YjNnam1sMw==" role="button">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a class="btn btn-outline-light btn-floating m-1" href="mailto:born2tolead@gmail.com" role="button">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </section>
+
+        <!-- Copyright -->
+        <section class="mb-0">
+            <p>&copy; 2024 Born To Lead Mountain Adventure. All rights reserved.</p>
+        </section>
+    </div>
+</footer>
+
+    <script src="static\main.js"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <!--all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

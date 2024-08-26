@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .navbar .nav-link {
+            color: white !important;
+        }
+    
+        .navbar .nav-link:hover {
+            color: #ccc !important;
+            /* Optional: Change color on hover */
+        }
+    </style>
+   
+    <!-- main css -->
+    <link rel="stylesheet" href="static\book.css" type="text/css">
+ 
+<!-- Font Awesome Plugin -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Bootstrap 5.3.3 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Merriweather:wght@400;700&display=swap"
+    rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Hikes and Events </title>
+    <link rel="icon" type="image/png" sizes="16x16" href="static\images\favicon.ico">
+    <style>
+        .image-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            overflow: hidden;
+        }
+    
+        .image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ensures the image covers the container while maintaining aspect ratio */
+        }
+    </style>
+</head>
+<body>
+<!-- nav bootstrap plugin-->
+<nav class="navbar  fixed-top " style="background-color: white;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"> BTL Mountain Adventure </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> BTL Mountain Adventure </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body" style="background-color: #37474f">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{{ url_for('about') }}"> About Us </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact') }}"> Contact Us </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('gallery') }}"> Our Gallery </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('book') }}"> Hikes & Events </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- end of nav-->
+
+
+<main>
+    <!-- Introduction Section -->
+    <section class=" text-white text-center py-5" style="background-color: #004d40; margin-top: 60px;">
+        <div class="container">
+            <h2 class="display-6 display-md-3 display-sm-4">Discover Our Exciting Hiking Events</h2>
+            <p class="lead">Embark on unforgettable adventures with our expertly guided hiking events. Whether you're a
+                seasoned trekker or a novice explorer, our diverse range of hikes offers something for everyone. From
+                breathtaking mountain views to serene forest trails, each journey promises to challenge and inspire. Dive
+                into our calendar of events and find your next great adventure!</p>
+        </div>
+    </section>
+
+<!-- Events Section -->
+<div class="container py-5 "style="margin-top: 40px;">
+    <div class="row row-cols-1 row-cols-md-3 g-4 " >
+        <!-- Event 0 -->
+        <div class="col">
+            <div class="card h-100">
+                <div class="image-container">
+                <img src="static\images\Snow0.jpg" class="card-img-top" alt="Event 1 Image">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title"> Mt Kilimanjaro </h5>
+                    <p class="card-text">An odyssey like no other. Price: Ksh 90,000</p>
+                    <p class="card-text">August 8th - 16th 2024</p>
+                    <a href="{{ url_for('tbook') }}" class="btn rounded-0 px-3 py-3 w-100" style="background-color: #f0c987;">Book Hike</a>
+                </div>
+            </div>
+        </div>
+        <!-- Event 1 -->
+        <div class="col">
+            <div class="card h-100">
+                <div class="image-container">
+                <img src="static\images\Ragia Falls.jpg" class="card-img-top" alt="Event 1 Image">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title"> Ragia Falls </h5>
+                    <p class="card-text">Explore the breathtaking mountain views. Price: Ksh 4,000</p>
+                    <p class="card-text">August 24th 2024</p>
+                    <a href="{{ url_for('tbook') }}" class="btn rounded-0 px-3 py-3 w-100" style="background-color: #f0c987;">Book Hike</a>
+                </div>
+            </div>
+        </div>
+        <!-- Event 2 -->
+        <div class="col">
+            <div class="card h-100">
+                <div class="image-container">
+                <img src="static\images\Kamweti.jpg" class="card-img-top" alt="Event 2 Image">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title"> Kamweti Forest </h5>
+                    <p class="card-text">Discover the beauty of the deep forest. Price: Ksh 4,500</p>
+                    <p class="card-text">September 14th 2024</p>
+                    <a href="{{ url_for('tbook') }}" class="btn  rounded-0 px-3 py-3 w-100" style="background-color: #f0c987;">Book Hike</a>
+                </div>
+            </div>
+        </div>
+        <!-- Event 3 -->
+        <div class="col">
+            <div class="card h-100">
+                <div class="image-container">
+                <img src="static\images\12 apostles.jpeg" class="card-img-top" alt="Event 3 Image">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">The 12 Apostles (Aberdares)</h5>
+                    <p class="card-text">Watch the sun set over the hills. Price: Ksh 4,500 </p>
+                    <p class="card-text">September 28th 2024</p>
+                    <a href="{{ url_for('tbook') }}" class="btn  rounded-0 px-3 py-3 w-100" style="background-color: #f0c987;">Book Hike</a>
+                </div>
+            </div>
+        </div>
+        <!-- Event 4 -->
+        <div class="col">
+            <div class="card h-100">
+                <div class="image-container">
+                <img src="static\images\Picnic-at-Tigoni-Falls-5-1024x576.jpg" class="card-img-top" alt="Event 4 Image">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Tigoni 5</h5>
+                    <p class="card-text">Follow the serene river trail. Price: Ksh 3,000</p>
+                    <p class="card-text">October 12th 2024</p>
+                    <a href="{{ url_for('tbook') }}" class="btn  rounded-0 px-3 py-3 w-100" style="background-color: #f0c987;">Book Hike</a>
+                </div>
+            </div>
+        </div>
+        <!-- Event 5 -->
+        <div class="col">
+            <div class="card h-100">
+                <div class="image-container">
+                <img src="static\images\Menengai-Crater-1-scaled.jpg" class="card-img-top" alt="Event 5 Image">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Menengai Crater</h5>
+                    <p class="card-text">Challenge yourself with a canyon climb. Price: Ksh 4,500</p>
+                    <p class="card-text">October 26th 2024</p>
+                    <a href="{{ url_for('tbook') }}" class="btn  rounded-0 px-3 py-3 w-100" style="background-color: #f0c987;">Book Hike</a>
+                </div>
+            </div>
+        </div>
+        <!-- Event 6 -->
+        <div class="col">
+            <div class="card h-100">
+                <div class="image-container">
+                <img src="static\images\mount-longonot-national-park-590x390.jpg " class="card-img-top" alt="Event 6 Image">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title"> Longonot </h5>
+                    <p class="card-text">Enjoy the trails of Longonot. Price: Ksh 4,000</p>
+                    <p class="card-text">November 9th 2024</p>
+                    <a href="{{ url_for('tbook') }}" class="btn rounded-0 px-3 py-3 w-100" style="background-color: #f0c987;">Book Hike</a>
+                </div>
+            </div>
+        </div>
+        <!-- Event 7 -->
+        <div class="col">
+            <div class="card h-100">
+                <div class="image-container">
+                <img src="static\images\karuru falls.jpeg" class="card-img-top" alt="Event 7 Image">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Karuru Falls (Aberdares)</h5>
+                    <p class="card-text">Reach the summit and see the world from above. Price: Ksh 4,500</p>
+                    <p class="card-text">November 23rd 2024</p>
+                    <a href="{{ url_for('tbook') }}" class="btn rounded-0 px-3 py-3 w-100" style="background-color: #f0c987;">Book Hike</a>
+                </div>
+            </div>
+        </div>
+        <!-- Event 8 -->
+        <div class="col">
+            <div class="card h-100">
+                <div class="image-container">
+                <img src="static\images\IMG-20240505-WA0070.jpg" class="card-img-top" alt="Event 8 Image">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title"> Kilimambogo </h5>
+                    <p class="card-text">Final Hike to end the year. Price: Ksh 4,500</p>
+                    <p class="card-text">December 21st 2024</p>
+                    <a href="{{ url_for('tbook') }}" class="btn rounded-0 px-3 py-3 w-100" style="background-color: #f0c987;">Book Hike</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+
+<!-- footer section here -->
+<footer class="footer  text-white text-center " style="background-color: #004d40;">
+    <div class="container p-4 mt-6">
+        <!-- Social Media Links -->
+        <section class="mb-4">
+            <a class="btn btn-outline-light btn-floating m-1"
+                href="https://www.facebook.com/stephen.muiru?mibextid=ZbWKwL" role="button">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="btn btn-outline-light btn-floating m-1"
+                href="https://twitter.com/stephenmuirubtl/status/688778267701194752?lang=en" role="button">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a class="btn btn-outline-light btn-floating m-1"
+                href="https://www.instagram.com/coachstephenmuiru?igsh=MXV1b2Z5YjNnam1sMw==" role="button">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a class="btn btn-outline-light btn-floating m-1" href="mailto:born2tolead@gmail.com" role="button">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </section>
+
+        <!-- Copyright -->
+        <section class="mb-0">
+            <p>&copy; 2024 Born To Lead Mountain Adventure. All rights reserved.</p>
+        </section>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+    crossorigin="anonymous"></script>
+<!--all compiled plugins (below), or include individual files as needed -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+    crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="static\gallery.css">
+    <!-- font awesome plugin -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Font Awesome Plugin -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+        .navbar .nav-link {
+            color: white !important;
+        }
+
+        .navbar .nav-link:hover {
+            color: #ccc !important;
+            /* Optional: Change color on hover */
+        }
+        .image-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%; /* This creates a 4:3 aspect ratio */
+    overflow: hidden;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 66.66%; /* 3:2 aspect ratio */
+    overflow: hidden;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the container while maintaining aspect ratio */
+}
+    </style>
+    <title> Our Gallery </title>
+    <link rel="icon" type="image/png" sizes="16x16" href="static\images\favicon.ico">
+</head>
+
+<body>
+    <header>
+        <!-- nav bootstrap plugin-->
+        <nav class="navbar  fixed-top " style="background-color: white;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"> BTL Mountain Adventure </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> BTL Mountain Adventure </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body" style="background-color: #37474f ">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="{{ url_for('home') }}">Home</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{{ url_for('about') }}"> About Us </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('contact') }}"> Contact Us </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('gallery') }}"> Our Gallery </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('book') }}"> Hikes & Events </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- end of nav-->
+    </header>
+
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <div class="container">
+            <h1>Our Gallery</h1>
+            <p>Explore the unforgettable moments from our past hikes. Browse through our photo and video gallery to relive
+                the experience and get inspired for your next adventure.</p>
+        </div>
+    </section>
+    
+    <!-- Photo Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Photo Gallery</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Photo 1 -->
+                <div class="col">
+                    <div class="gallery-item">
+                        <div class="image-container">
+                        <img src="static\images\IMG-20240823-WA0037.jpg" alt="Sunrise at Kilimanjaro" class="img-fluid">
+                        </div>
+                        <p class="gallery-caption"> Beautiful Sunrise at Kilimanjaro </p>
+                    </div>
+                </div>
+                <!-- Photo 2 -->
+                <div class="col">
+                    <div class="gallery-item">
+                        <div class="image-container">
+                        <img src="static\images\IMG-20240505-WA0070.jpg" alt="Forest Adventure"  class="img-fluid">
+                        </div>
+                        <p class="gallery-caption"> Chyulu Hills </p>
+                    </div>
+                </div>
+                <!-- Photo 3 -->
+                <div class="col">
+                    <div class="gallery-item">
+                        <div class="image-container">
+                        <img src="static\images\IMG-20240505-WA0072.jpg" alt="Lakeview Walk"  class="img-fluid">
+                        </div>
+                        <p class="gallery-caption">Chyulu Hills Hike Team </p>
+                    </div>
+                </div>
+                <!-- Photo 4 -->
+                <div class="col">
+                    <div class="gallery-item">
+                        <div class="image-container">
+                        <img src="static\images\IMG-20240505-WA0110.jpg" alt="Lakeview Walk"  class="img-fluid">
+                        </div>
+                        <p class="gallery-caption">Kilimanjaro Peak View</p>
+                    </div>
+                </div>
+                <!-- Photo 5 -->
+                <div class="col">
+                    <div class="gallery-item">
+                        <div class="image-container">
+                        <img src="static\images\IMG-20240505-WA0073.jpg" alt="Lakeview Walk"  class="img-fluid">
+                        </div>
+                        <p class="gallery-caption">Warm up exercises pre-hike </p>
+                    </div>
+                </div>
+                <!-- Photo 6 -->
+                <div class="col">
+                    <div class="gallery-item">
+                        <div class="image-container">
+                        <img src="static\images\IMG-20240505-WA0116.jpg" alt="Lakeview Walk"  class="img-fluid">
+                        </div>
+                        <p class="gallery-caption">Nature Trail</p>
+                    </div>
+                </div>
+                <!-- Photo 7 -->
+                <div class="col">
+                    <div class="gallery-item">
+                        <div class="image-container">
+                        <img src="static\images\IMG-20240505-WA0124.jpg" alt="Lakeview Walk"  class="img-fluid">
+                        </div>
+                        <p class="gallery-caption"> Hiking the Great Mt Kenya </p>
+                    </div>
+                </div>
+                <!-- Photo 8 -->
+                <div class="col">
+                    <div class="gallery-item">
+                        <div class="image-container">
+                        <img src="static\images\IMG-20240802-WA0021.jpg" alt="Lakeview Walk"  class="img-fluid">
+                        </div>
+                        <p class="gallery-caption">Summiting Mt Kilimambogo</p>
+                    </div>
+                </div>
+                <!-- Photo 9 -->
+                <div class="col">
+                    <div class="gallery-item">
+                        <div class="image-container">
+                        <img src="static\images\IMG-20240802-WA0022.jpg" alt="Lakeview Walk"  class="img-fluid">
+                        </div>
+                        <p class="gallery-caption">Beautiful Views at Kamweti Forest </p>
+                    </div>
+                </div>
+                <!-- Photo 10 -->
+                <div class="col">
+                    <div class="gallery-item">
+                        <div class="image-container">
+                        <img src="static\images\IMG-20240823-WA0041.jpg" alt="Lakeview Walk"  class="img-fluid">
+                        </div>
+                        <p class="gallery-caption">Lake Elementaita Team</p>
+                    </div>
+                </div>
+                <!-- Photo 11 -->
+                <div class="col">
+                    <div class="gallery-item">
+                        <div class="image-container">
+                        <img src="static\images\IMG-20240505-WA0063.jpg" alt="Lakeview Walk"  class="img-fluid">
+                        </div>
+                        <p class="gallery-caption">Hikers from celebrating their summit</p>
+                    </div>
+                </div>
+                <!-- Photo 12 -->
+                <div class="col">
+                    <div class="gallery-item">
+                        <div class="image-container">
+                        <img src="static\images\IMG-20240505-WA0061.jpg" alt="Lakeview Walk"  class="img-fluid">
+                        </div>
+                        <p class="gallery-caption">Hikers prepping for the great odyssey ahead</p>
+                    </div>
+                </div>
+<!-- Photo 13 -->
+<div class="col">
+    <div class="gallery-item">
+        <div class="image-container">
+            <img src="static\images\IMG-20240823-WA0043.jpg" alt="Lakeview Walk" class="img-fluid">
+        </div>
+        <p class="gallery-caption">Views from Elementaita </p>
+    </div>
+</div>
+<!---->
+<!-- Photo 14 -->
+<div class="col">
+    <div class="gallery-item">
+        <div class="image-container">
+            <img src="static\images\IMG-20240823-WA0040.jpg" alt="Lakeview Walk" class="img-fluid">
+        </div>
+        <p class="gallery-caption">Beautiful views at Mackinders camp - Mt Kenya </p>
+    </div>
+</div>
+<!---->
+<!-- Photo 15 -->
+<div class="col">
+    <div class="gallery-item">
+        <div class="image-container">
+            <img src="static\images\IMG-20240823-WA0036.jpg" alt="Lakeview Walk" class="img-fluid">
+        </div>
+        <p class="gallery-caption">Nature at its finest - Mt Kenya </p>
+    </div>
+</div>
+<!---->
+<!-- Photo 16 -->
+<div class="col">
+    <div class="gallery-item">
+        <div class="image-container">
+            <img src="static\images\IMG-20240823-WA0030.jpg" alt="Lakeview Walk" class="img-fluid">
+        </div>
+        <p class="gallery-caption">Lenana Peak Mt Kenya </p>
+    </div>
+</div>
+<!---->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Video Gallery Section -->
+    <section class="videos-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Video Gallery</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Video 1 -->
+                <div class="col">
+                    <div class="gallery-item">
+                        <div class="video-container">
+                        <video controls>
+                            <source src="static\images\VID-20240523-WA0038.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        </div>
+                        <p class="gallery-caption">Mountain Climb Video</p>
+                    </div>
+                </div>
+                <!-- Video 2 -->
+                <div class="col">
+                    <div class="gallery-item">
+                        <div class="video-container">
+                        <video controls>
+                            <source src="static\images\VID-20240802-WA0009.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        </div>
+                        <p class="gallery-caption">Chyulu hills Forest Hike</p>
+                    </div>
+                </div>
+                <!-- Video 3 -->
+                <div class="col">
+                    <div class="gallery-item">
+                        <div class="video-container">
+                        <video controls>
+                            <source src="static\images\lv_0_20240812191933.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        </div>
+                        <p class="gallery-caption">Forest Exploration Video</p>
+                    </div>
+                </div>
+                <!-- Add more videos as needed -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer section here -->
+    <footer class="footer  text-white text-center " style="background-color: #004d40;">
+        <div class="container p-4 mt-6">
+            <!-- Social Media Links -->
+            <section class="mb-4">
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/stephen.muiru?mibextid=ZbWKwL"
+                    role="button">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/stephenmuirubtl/status/688778267701194752?lang=en" role="button">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/coachstephenmuiru?igsh=MXV1b2Z5YjNnam1sMw=="
+                    role="button">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="btn btn-outline-light btn-floating m-1" href="mailto:born2tolead@gmail.com" role="button">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </section>
+
+            <!-- Copyright -->
+            <section class="mb-0">
+                <p>&copy; 2024 Born To Lead Mountain Adventure. All rights reserved.</p>
+            </section>
+        </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <!--all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

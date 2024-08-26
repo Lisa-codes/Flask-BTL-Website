@@ -1,0 +1,47 @@
+/* GLOBAL STYLES
+ * Padding below the footer and lighter body text
+* -------------------------------------------------- */
+
+body {
+    font-family: 'Lora', serif;
+    /* or 'Merriweather', serif; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Merriweather', serif;
+    /* for headings */
+}
+
+p,
+a,
+li {
+    font-family: 'Lora', serif;
+    /* for body text */
+}
+/*carousel*/
+/* Adjust the height and width of the carousel images */
+.carousel-img {
+    height: 650px;
+    /* Adjust as needed */
+    object-fit: cover;
+}
+
+/* Center the carousel caption */
+.carousel-caption-custom {
+    text-align: center;
+    bottom: 20%;
+    /* Adjust vertical position as needed */
+}
+
+.carousel-caption-custom h1,
+.carousel-caption-custom p {
+    color: #fff;
+    /* Optional: ensure text color is readable */
+}
+
+/*end*/

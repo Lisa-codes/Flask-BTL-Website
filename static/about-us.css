@@ -1,0 +1,61 @@
+body {
+    font-family: 'Lora', serif;
+    /* or 'Merriweather', serif; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Merriweather', serif;
+    /* for headings */
+}
+
+p,
+a,
+li {
+    font-family: 'Lora', serif;
+    /* for body text */
+}
+.section-title {
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.history-section{
+    background-color: #004d40;
+    padding: 60px 20px;
+    color: #ffffff;
+}
+.purpose-section {
+    padding: 60px 20px;
+    background-color: #a8c0a4;
+    color: #ffffff;
+}
+
+.coach-section {
+    padding: 60px 20px;
+}
+
+.coach-section img {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.coach-bio {
+    padding-left: 30px;
+    padding-top: 20px;
+}
+@media (min-width: 768px) {
+    .coach-bio {
+        padding-left: 30px;
+    }
+}

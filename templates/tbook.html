@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <link rel="stylesheet" href="static\tbook.css">
+        <!-- font awesome plugin -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        
+        <!-- Font Awesome Plugin -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        
+        <!-- Bootstrap 5.3.3 CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Merriweather:wght@400;700&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet">
+            <!-- jQuery -->
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+                integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<link rel="icon" type="image/png" sizes="16x16" href="static\images\favicon.ico">
+<style>
+    .navbar .nav-link {
+        color: white !important;
+    }
+
+    .navbar .nav-link:hover {
+        color: #ccc !important;
+        /* Optional: Change color on hover */
+    }
+</style>
+</head>
+<body>
+<!-- nav bootstrap plugin-->
+<nav class="navbar  fixed-top " style="background-color: white;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"> BTL Mountain Adventure </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> BTL Mountain Adventure </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body" style="background-color: #37474f; ">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{{ url_for('about') }}"> About Us </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact') }}"> Contact Us </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('gallery') }}"> Our Gallery </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('book') }}"> Hikes & Events </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- end of nav-->
+<!-- Booking Page -->
+<div class="container my-5">
+    <!-- Encouragement and Requirements Section -->
+    <div class="mb-5 p-4" style="background-color: #a8c0a4; border-radius: 8px;">
+        <h3 class="text-center mb-4" style="color: #004d40;">Get Ready for Your Adventure!</h3>
+        <p>We're thrilled to have you join us for an unforgettable hiking experience. Before you book, please ensure you
+            have the following essentials:</p>
+        <ul class="list-unstyled">
+            <li><i class="bi bi-check-circle-fill" style="color: #f0c987;"></i> A minimum of 2 liters of water</li>
+            <li><i class="bi bi-check-circle-fill" style="color: #f0c987;"></i> Healthy snacks to keep your energy up
+            </li>
+            <li><i class="bi bi-check-circle-fill" style="color: #f0c987;"></i> Sturdy hiking shoes</li>
+            <li><i class="bi bi-check-circle-fill" style="color: #f0c987;"></i> A small first-aid kit</li>
+            <li><i class="bi bi-check-circle-fill" style="color: #f0c987;"></i> Comfortable clothing suitable for hiking
+            </li>
+            <li><i class="bi bi-check-circle-fill" style="color: #f0c987;"></i> Sunscreen and a hat</li>
+        </ul>
+        <p class="mt-3">We can't wait to explore the great outdoors with you. Your adventure starts here!</p>
+    </div>
+
+    <h2 class="text-center mb-4">Book Your Hike</h2>
+
+<form action="{{ url_for('tbook') }}" method="POST" class="needs-validation" novalidate>
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8">
+            <div class="mb-4">
+                <label for="full_name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="full_name" name="full_name" required>
+                <div class="invalid-feedback">
+                    Please enter your full name.
+                </div>
+            </div>
+            <div class="mb-4">
+                <label for="phone_number" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone_number" name="phone_number" required>
+                <div class="invalid-feedback">
+                    Please enter a valid phone number.
+                </div>
+            </div>
+            <div class="mb-4">
+                <label for="hike" class="form-label">Hike You're Booking</label>
+                <input type="text" class="form-control" id="hike" name="hike" required>
+                <div class="invalid-feedback">
+                    Please specify the hike you are booking.
+                </div>
+            </div>
+            <div class="mb-4">
+                <label for="amount_paid" class="form-label">Amount Paid</label>
+                <input type="number" class="form-control" id="amount_paid" name="amount_paid" required>
+                <small class="form-text text-muted">Please make sure to pay the full amount.</small>
+                <div class="invalid-feedback">
+                    Please enter the amount paid.
+                </div>
+            </div>
+
+            <!-- Lipa na M-Pesa Till Section -->
+            <div class="mb-4 text-center">
+                <p class="fw-bold" style="color: #d32f2f;">Lipa through our till number: <span
+                        style="font-size: 1.2em;">5316143</span></p>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-lg rounded-0" style="background-color: #f0c987; color: black;">
+                    Submit Booking
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+</div>
+
+<script>
+    // Bootstrap 5 form validation
+    (function () {
+        'use strict'
+        var forms = document.querySelectorAll('.needs-validation')
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+</script>
+
+    <!-- footer section here -->
+    <footer class="footer  text-white text-center " style="background-color: #004d40;">
+        <div class="container p-4 mt-6">
+            <!-- Social Media Links -->
+            <section class="mb-4">
+                <a class="btn btn-outline-light btn-floating m-1"
+                    href="https://www.facebook.com/stephen.muiru?mibextid=ZbWKwL" role="button">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="btn btn-outline-light btn-floating m-1"
+                    href="https://twitter.com/stephenmuirubtl/status/688778267701194752?lang=en" role="button">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="btn btn-outline-light btn-floating m-1"
+                    href="https://www.instagram.com/coachstephenmuiru?igsh=MXV1b2Z5YjNnam1sMw==" role="button">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="btn btn-outline-light btn-floating m-1" href="mailto:born2tolead@gmail.com" role="button">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </section>
+    
+            <!-- Copyright -->
+            <section class="mb-0">
+                <p>&copy; 2024 Born To Lead Mountain Adventures. All rights reserved.</p>
+            </section>
+        </div>
+    </footer>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <!--all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+
+   
+    .header-content h2 {
+        font-size: 2rem;
+    }
+
+    .header-content p {
+        font-size: 1rem;
+    }
+
+    .features,
+    .print,
+    .cohort,
+    .contact {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .print {
+        height: auto;
+    }
+
+    .print-image,
+    .cohort img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-email input[type="text"] {
+        width: calc(100% - 40px);
+    }
+
+    .btn input[type="submit"] {
+        width: calc(100% - 40px);
+    }
+}
+
+.logo {
+    left: 2px;
+    top: 2px;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.foot-body {
+    flex-direction: column;
+    /* Set to column direction on smaller screens */
+    align-items: center;
+    /* Center the items */
+    display: block;
+}
+@media  (min-width: 768px) {
+    .footer {
+        flex-direction: column;
+    }
+
+   
+}
+@media (min-width: 992px){
+    .nv {
+          justify-content: center;
+          
+        }
+    
+        .nv ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            left: 330px;
+        }
+    
+        .nv li {
+            display: inline-flex;
+            margin: 0 30px;
+            justify-content: center;
+        }
+        .logo {
+            padding: 20px;
+            display: inline-flex;
+            position: absolute;
+            top: 0;
+            left: 10px;
+                }
+                .logo img{
+                    width: 200px;
+                }
+                .cohort {
+                    margin-top: 20px;
+                    display: flex;
+                    margin-bottom: 20px;
+                    justify-content: center;
+                    padding: 0 20px;
+                    box-sizing: border-box;
+                    margin-bottom: 20px;
+                }
+                
+                .cohort img {
+                    height: 400px;
+                    width: 400px;
+                    display: block;
+                    overflow-x: hidden;
+                    transition: all 0.7s ease;
+                    padding: 0 20px;
+                    margin: 0 20px;
+                    visibility: visible;
+                }
+                
+                .cohort img:hover {
+                    transform: scale(1.1);
+                }
+                
+                .cohort a {
+                    text-align: center;
+                    color: white;
+                    text-decoration: none;
+                    position: relative;
+                    font-size: 2em;
+                }
+                
+                .cohort a span {
+                    position: absolute;
+                    top: 90%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                    padding: 10px;
+                    border-radius: 5px;
+                }
+                
+                .cohort a:hover span {
+                    opacity: 1;
+                }
+
+
+}
